@@ -1,6 +1,4 @@
-import java.util.Arrays;
-
-public class sortColors {
+public class SortColors {
     public static int [] sortColors(int[] nums) {
 //        int arr[] = new int[nums.length];
 //        Arrays.fill(arr, 1);
@@ -42,9 +40,12 @@ public class sortColors {
                 high--;
             }
             else if(nums[mid] == 0){
-                nums[mid] = nums[low] + nums [mid];
-                nums[low] = nums[mid] - nums[low];
-                nums[mid] = nums[mid] - nums[low];
+                int temp=nums[low];
+                nums[low]=nums[mid];
+                nums[mid]=temp;
+//                nums[mid] = nums[low] + nums [mid];
+//                nums[low] = nums[mid] - nums[low];
+//                nums[mid] = nums[mid] - nums[low];
                 low++;
             }
             else if(nums[mid] == 1){
@@ -55,7 +56,7 @@ public class sortColors {
     }
 
     public static void main(String [] args){
-        int arr[] = {2, 2};
+        int arr[] = {2,0,2,1,1,0};
         int result[] = sortColors(arr);
         for (int element: result) {
             System.out.println(element);
