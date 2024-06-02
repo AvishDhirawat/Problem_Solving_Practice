@@ -16,7 +16,7 @@ public class SearchInRoatatedArray {
                     low = mid + 1;
                 }
             } else {
-                if (nums[high] <= target && nums[mid] >= target) {
+                if (nums[high] >= target && nums[mid] <= target) {
                     low = mid + 1;
                 } else {
                     high = mid - 1;
@@ -27,8 +27,9 @@ public class SearchInRoatatedArray {
     }
 
     public static void main(String[] args) {
-        int[] nums = {4, 5, 6, 7, 1, 2, 3};
-        int target = 1;
+//        int[] nums = {4, 5, 6, 7, 1, 2, 3};
+        int[] nums = {8, 1, 2, 3, 4, 5, 6, 7};
+        int target = 6;
         int result = search(nums, target);
         System.out.println(result);
     }
