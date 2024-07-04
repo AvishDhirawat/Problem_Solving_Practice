@@ -16,11 +16,11 @@ public class ValidAnagram {
         for(int i=0;i<ch.length;i++){
             freq[ch[i]-'a']++;
         }
-        for(int i=0;i<ch2.length;i++){
-            freq[ch2[i]-'a']--;
+        for (char c : ch2) {
+            freq[c - 'a']--;
         }
-        for(int i=0;i<freq.length;i++){
-            if(freq[i]!=0){
+        for (int j : freq) {
+            if (j != 0) {
                 return false;
             }
         }
