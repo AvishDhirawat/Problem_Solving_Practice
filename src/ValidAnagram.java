@@ -1,11 +1,5 @@
 public class ValidAnagram {
     public boolean isAnagram(String s, String t) {
-    // Doesn't work on LeetCode
-//        if(s.contains(t)) {
-//            return true;
-//        }
-//        return false;
-
         if (s.length() != t.length()) {
             return false;
         }
