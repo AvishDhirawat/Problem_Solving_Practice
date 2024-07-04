@@ -13,8 +13,8 @@ public class ValidAnagram {
         int[] freq = new int[26];
         char[] ch = s.toCharArray();
         char[] ch2 = t.toCharArray();
-        for(int i=0;i<ch.length;i++){
-            freq[ch[i]-'a']++;
+        for (char value : ch) {
+            freq[value - 'a']++;
         }
         for (char c : ch2) {
             freq[c - 'a']--;
